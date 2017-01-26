@@ -19,7 +19,6 @@ module.exports = function(router){
 	router.post("/", function(req, res){
 		db.burger.create({
 			burger_name: req.body.burger_name,
-			// customerId: 0,
 			devoured: false
 		}).then(function(dbBurger){
 			console.log(dbBurger);
