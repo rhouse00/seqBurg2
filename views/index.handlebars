@@ -1,0 +1,79 @@
+
+<div class="row">
+		<img src="/assets/img/burger2.svg" alt="burger">
+</div>
+<div class="row">
+	<div class="col-md-offset-4 col-md-4 ">
+		<h1> BURGER TOWN! </h1>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-offset-2 col-md-4">
+
+		<div>
+			{{#each burgers}}
+				{{#unless this.devoured}}
+					<div class="well">
+
+						<h4>{{this.burger_name}}</h4>
+
+						<form action="/{{customer.id}}?_method=PUT" method="POST">
+							<input type="text" name="customer" value="" placeholder="Who's eatting this?">
+						</form>
+
+						<form action="/{{this.id}}?_method=PUT" method="POST">
+							<input type="hidden" name="devoured" value="true">
+							<button class="btn btn-danger" type="submit">Devour!</button>
+						</form>
+
+					</div>
+				{{/unless}}
+			{{/each}}
+		</div>
+
+	</div>
+
+	<div class="col-md-4">
+
+		<div>
+			{{#each burgers}}
+				{{#if this.devoured}}
+					<div class="well">
+
+						<p id="burgerName">{{this.burger_name}}</p>
+						<p>(Eaten by {{this.customer}})</p>
+
+
+						<form action="/{{this.id}}?_method=PUT" method="POST">
+							<input type="hidden" name="devoured" value="false">
+							<button class="btn btn-success" type="submit">Order Again?</button>
+						</form>
+						<form action="/{{this.id}}?_method=DELETE" method="POST">
+							<input type="hidden" name="id" value="false">
+							<button class="btn btn-info" type="submit">Get rid of these plates</button>
+						</form>
+
+					</div>
+				{{/if}}
+			{{/each}}
+		</div>
+
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="col-md-offset-4 col-md-4">
+		<div>
+			<form action="/" method="POST">
+				<input type="text" name="customer" placeholder="Customer Name">
+				<input type="text" name="burger_name" placeholder="Burger Name">
+				<button class="btn btn-primary" type="submit">Make a new Burger!</button>
+			</form>
+		</div>
+		<div class="row">
+			<h4>Type in your burger name, then click the button to server it up!</h4>
+		</div>
+	</div>
+</div>

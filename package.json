@@ -1,0 +1,36 @@
+{
+  "name": "sequelizedBurger",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.9.4",
+    "npm": "3.10.10"
+  },
+  "description": "Sequelized Burger Assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhouse00/burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhouse00/burger/issues"
+  },
+  "homepage": "https://github.com/rhouse00/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7",
+    "mysql": "^2.13.0",
+    "pg": "^6.1.2",
+    "sequelize": "^3.30.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
