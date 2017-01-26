@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhouse00/burger.git"
+    "url": "git+https://github.com/rhouse00/seqBurg2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rhouse00/burger/issues"
+    "url": "https://github.com/rhouse00/seqBurg2/issues"
   },
-  "homepage": "https://github.com/rhouse00/burger#readme",
+  "homepage": "https://github.com/rhouse00/seqBurg2#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
