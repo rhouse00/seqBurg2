@@ -12,18 +12,20 @@ module.exports = function(sequelize, DataTypes){
 			allowNull: false,
 			defaultValue: 0
 		}
-	},{
-		classMethods: {
-			associate: function(models){
-				burger.belongsTo(models.customer, {
-					onDelete: "CASCADE",
-					foreignKey:{
-						allowNull: false
-					}
-				});
-			}
-		}
-},{
+	}
+// 	,{
+// 		classMethods: {
+// 			associate: function(models){
+// 				burger.belongsTo(models.customer, {
+// 					onDelete: "CASCADE",
+// 					foreignKey:{
+// 						allowNull: false
+// 					}
+// 				});
+// 			}
+// 		}
+// }
+,{
 		timestamps: false
 	});
 	return burger;
