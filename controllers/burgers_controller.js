@@ -23,6 +23,8 @@ module.exports = function(router){
 		}).then(function(dbBurger){
 			console.log(dbBurger);
 			res.redirect("/");
+		}).catch(function(error){
+			throw error;
 		});
 	});
 
