@@ -19,6 +19,7 @@
 						<h4>{{this.burger_name}}</h4>
 
 						<form action="/{{this.id}}?_method=PUT" method="POST">
+							<input type="text" name="customer" value="" placeholder="Who's gonna eat this??">
 							<input type="hidden" name="devoured" value="true">
 							<button class="btn btn-danger" type="submit">Devour!</button>
 						</form>
@@ -38,7 +39,7 @@
 					<div class="well">
 
 						<p id="burgerName">{{this.burger_name}}</p>
-						<!-- <p>(Eaten by {{this.customer}})</p> --!>
+						p>(Eaten by {{this.customer}})</p>
 
 
 						<form action="/{{this.id}}?_method=PUT" method="POST">

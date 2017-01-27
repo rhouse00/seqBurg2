@@ -30,7 +30,8 @@ module.exports = function(router){
 
 	router.put("/:id", function(req, res){
 		db.burger.update({
-				devoured: req.body.devoured
+				devoured: req.body.devoured,
+				customer: req.body.customer
 			},{
 				where: {id: req.params.id}
 			}).then(function(){
